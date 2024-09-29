@@ -1,0 +1,598 @@
+AI-Powered virtual customer Support Assistant for a telecom company
+Objective:
+Participants are tasked with building an AI-based virtual customer support assistant capable of handling common customer inquiries for a telecom company. The AI assistant should provide real-time solutions to frequently asked questions, diagnose internet connectivity issues, manage account details, and update services. The project should adopt a multi-channel approach, functioning across platforms like web, mobile apps, or messaging services.
+Requirements:
+1. Natural Language Understanding (NLU)
+The assistant must be capable of understanding and responding to user requests in a conversational manner using AI-powered NLP tools (e.g., custom NLP models, open-source frameworks).
+2. Handling Common Requests
+The assistant should respond to frequent inquiries, such as:
+Checking internet speed or current plan
+Resolving common connectivity issues (e.g., restarting the router)
+Changing Wi-Fi passwords
+Upgrading or downgrading a subscription plan
+Etc
+3. Problem Diagnosis & Hints
+Implement a basic troubleshooting system where the assistant can guide users through connectivity issues, offering solutions and hints.
+4. Multi-Channel Support
+The assistant should be accessible on at least two platforms (e.g., website chat widget / mobile app integration or Telegram/Facebook ). A voice-to-text feature is encouraged.
+5. Sentiment Analysis
+Integrate a sentiment analysis module to detect customer frustration or satisfaction and escalate to a human agent if needed.
+6. Personalized Recommendations
+The AI should suggest better plans or services based on the customer's usage patterns and needs (e.g., recommending a higher-speed plan for frequent slow speeds).
+7. Real-Time Problem Detection & Escalation
+Implement AI algorithms to detect keywords or sentiments (e.g., frustration) during interactions to identify customers requiring urgent attention. The assistant should recognize when human intervention is necessary (e.g., canceling a service) and escalate seamlessly with conversation history and relevant context.
+8. Feedback Collection & Analysis
+Request customer feedback after each interaction. Use NLP to analyze feedback and classify satisfaction levels (e.g., happy, neutral, dissatisfied). Provide insights into customer satisfaction trends over time.
+9. User Authentication & Data Security
+Ensure secure user authentication for accessing personal data (e.g., account details, subscription info). If the user is not logged in, they can only receive general information from the assistant. Authentication is required to access any information related to the customer's account.
+Additional Constraints:
+Emphasis on Free Services: Use free and/or open-source components where possible.
+Local Execution: The solution should run entirely locally without relying on external cloud services.
+Frontend Separated from Backend
+Evaluation Criteria:
+Technical Execution (8 points): Quality of AI implementation, platform integration, problem-solving ability, and real-time escalation.
+Functionality & Architecture (8 points): The assistant's ability to handle complex tasks, adaptability, and how the technical architecture supports performance and scalability.
+User Experience (5 points): Ease of use, accessibility, and feedback collection.
+Innovation (3 points): Creativity in the solution's design and additional functionalities that exceed the basic requirements.
+Website chat widget / mobile app integration ( 8 points)
+Telegram/ Facebook ( 5 points)
+Expected Output:
+Demo: Showcasing the virtual assistant in action, handling common customer issues for a telecom company.
+Technical Documentation: Explaining the architecture, AI models, and implementation details, including problem detection, escalation, and feedback analysis.
+Data:
+Use open-source data for training the assistant in NLU and NLP.
+Create user modules based on these categories:
+User Information:
+ID
+Login
+First Name, Last Name
+IDNP (National Identification Number)
+User Type (Home/Business)
+Phone Number
+Email
+Communication Language
+Customer Category (based on tenure/subscription amount)
+Address
+Connection (physical connection address, including central equipment)
+Region/Branch
+Subscription Type
+Connected Equipment Type
+Comments
+Customer History Data:
+Recorded Calls
+Technical Issues (open/closed topics)
+Surveys
+Complaints
+Commercial Requests
+Tickets to Engineers
+
+
+
+
+Include tone of communication data:
+
+
+
+Nr.
+Criteriul
+Exemplificare
+
+
+1
+Forma de salut
+- Salutul, prezentarea companiei, numele consultantului.
+1
+- Salutul în dependență de perioada zilei
+- Articularea cuvintelor trebuie să fie clară
+Exemplu: „Bună ziua, compania Starnet, mă numesc Ion, cu ce vă pot ajuta?”
+2
+Analiza istoricului
+Analiza istoricului adresărilor clientului indiferent de solicitarea lui
+1
+3
+Respectarea politicii de confidentialitate
+- identificarea conform instructiunii privind Politica Datelor cu Caracter Personal
+2
+- informatii care contin datele cu caracter personal ale clientului sint communicate doar dupa ce clientul ne ofera IDNP, sau cel putin ultimele 4 cifre din IDNP (detalii despreconsum, parola wifi , numar contract s.a)
+4
+Politete, empatie si gestionare conflict
+- Agentul este respectuos, folosește expresii de politete si intonatie binevoitoare,manifestă empatie si interes
+2
+- Ascultarea activă
+- Este evitat monologul de către agent
+- Clientul nu este întrerupt și nu este grăbit
+- Agentul se adresează clientului pe nume
+5
+Oferirea informatiei /solutiei corecte si complete
+- Sunt identificate corect necesitatile clientului
+1
+- Informatia/solutia oferită este in conformitate cu procedurile de lucru existente (surse autorizate)
+6
+Pauze / Hold / Redirecționări
+- Apelul nu este pus în așteptare fără înștiințarea clientului
+2
+- Pauzele lungi, neanunțate din partea consultantului
+- Redirecționări fără temei
+7
+Scopul apelului - soluționarea deplină a deranjamentului raportat*
+- confirmare din partea clientului privind soluționarea deranjamentului
+2
+- cazul clientului este soluționat pînă la capat
+- acțiunea agentului a rezolvat deranjamentul clientului
+8
+Categorizarea si gestionarea bazelor de date
+- Categorizarea apelului conform criteriilor stabilite in Epicor
+2
+- Escaladarea case-urilor catre echipele responsabile
+- Completarea cu comentarii a case-urilor deschise
+- Identificarea corectă in baza de date
+9
+Finalizarea și sumarizarea apelului
+- informatia oferita sau actiunile ce urmeaza sa le intreprinda clientul dupa finalizarea apelului sînt sumarizate de catre agent
+2
+- concretizarea lipsei altor întrebări: „Aveți și alte întrebări la care vă putem ajuta?”
+- apelul nu este închis înaintea clientului
+- agentul revine la client în cazul întreruperii apelului
+- agentul multumeste pentru apel, exemplu:„Vă mulțumim pentru apel, vă dorim o zi frumoasă/ o seară plăcută. La revedere.”
+
+
+TOTAL
+
+
+15
+
+
+Commercial data:
+
+Script Support RO/RU Subiecte Comerciale
+SALUT / INTRODUCERE 
+Bună ziua, mă numesc … .
+Cu ce Vă putem fi de folos?
+Bună ziua, mă numesc … .
+Cu ce Vă putem ajuta? 
+Добрый день , меня зовут … .
+Чем  можем Вам помочь?   
+SOLICITARE DE DATE DE LA CLIENT
+Indicați Vă rog ID-ul Dvs. personal sau adresa de prestare a serviciilor, pentru a reuși să Vă ajutăm.
+Indicați Vă rog adresa exactă de prestare a serviciilor, pentru a reuși să Vă ajutăm.
+Укажите пожалуйста Ваш ИД или точный адрес , чтобы мы могли Вам помочь .
+Укажите пожалуйста точный адрес, и мы проверим если есть возможность к подключению.
+
+
+INFORMAȚIE COMERCIALĂ
+INFORMAȚIE COMERCIALĂ EXISTENTĂ
+Oferta actuală la serviciile StarNet include: prețuri mici pentru planuri mari! Am pregătit cele mai avantajoase abonamente, toate cu reducere Conectează-te acum și bucură-te de o experiență digitală unică: internet cu super viteză, televiziune interactivă în format HD și telefonie IP cu 1200 de minute gratuite.
+Mai multe detalii pot fi vizualizate aici: https://promo.starnet.md/ro
+*Condițiile ofertei: Promoția este valabilă pentru clienții noi și existenți, cu termen minim contractual executat, care vor semna/resemna şi nu este compatibilă cu alte oferte active. 
+Мы подготовили самые выгодные абонементы, все со скидкой . Подключитесь прямо сейчас и наслаждайтесь уникальными цифровыми возможностями: высокоскоростной интернет, HD-интерактивное телевидение и бесплатная IP-телефония на 1200 минут. Подключись сейчас и получи на любой абонемент скидку
+Больше информации можете найти здесь: https://promo.starnet.md/ru
+* Условия акции:  Данное предложение действительно для новых, а также существующих клиентов, у которых истек срок действия контракта .
+CABINET PERSONAL
+Pentru a intra în Cabinetul personal accesați acest link https://my.starnet.md/ , ID personal (este indicat în contract  și în factura Dvs), dar  daca nu cunoasteti parola o puteți activa utilizând comanda „Restabilește parola,,
+Login:
+ID:
+Е-mail:
+Для того чтобы  зайти в личный кабинет зайдите на эту ссылку https :// my . starnet . md / user / login
+ИД (написан в  контракте и в счёте) a пароли можете восстановить по „ Restabileș te parola” Login:
+ID:
+Е-mail:
+CONTROL PARENTAL
+Pentru a activa sau a dezactiva control parental este necesar să accesați: cabinet personal >> alte servicii >> control parental >> selectați categoria >> „Salvează”   
+Pentru mai multe detalii, accesați link-ul https://www.starnet.md/news/optiunea-control-parental-serviciu-gratuit-starnet/ sau telefonați Serviciul Asistență Tehnică (persoane fizice) Tel: (022) 844-555
+Чтобы подключить или отключить  родительский контроль, вам необходимо: личный кабинет >> другие услуги >> родительский контроль >> выбирает категорию >> „Cохранить”
+Для более подробной информации перейдите по ссылке: https://www.starnet.md/news/optiunea-control-parental-serviciu-gratuit-starnet/  или позвоните в Службу технической поддержки Тел: (022) 844-555
+STELE DE FIDELITATE
+Cum te înscrii în sistemul de fidelitate?
+Pentru a beneficia de programul de fidelitate, este nevoie să te înregistrezi în program.
+---Accesează my.starnet.md
+---Conectează-te cu loginul și parola din contractul pe care l-ai primit la conectare
+---Completează chestionarul de înscriere și obține primele 500 de stele
+
+Cum acumulezi suplimentar stele de fidelitate?
+---Când achiți în avans abonamentul pentru 1 an, primești 1000 stele cadou
+---La ziua ta de naștere îți oferim 200 de stele
+---Invită un prieten la StarNet și obține stele în valoarea abonamentului acestuia (conform tarifului contractual)
+SAU
+Pentru mai multe detalii, accesați link-ul:
+https://www.starnet.md/prietenii-starnet-2/
+
+Înscrieți-vă la programul de loialitate "Prieteni StarNet"   https://www.starnet.md/prietenii-starnet-2/  
+Accesând cabinetul personal>> compatimentul MY STARNET>> PRIETENII STARNET>> Apoi  puteți începe să colectați puncte de loialitate! Acest program se bazează pe sistemul de acumulare a punctelor de loialitate. Numărul de loialitate a stelelor depinde de plata la timp a facturii, valoarea pachetului și a timpului petrecut în rețeaua StarNet.
+Puteți folosi loialitatea acestor stele pentru:        
+1. Reîncărcarea contului StarNet.prin convertirea stelelor de fidelitate:
+Accesind cabinetul personal , Accesați compatimentul MY STARNET>> PRIETENII STARNET>>CATALOG SERVICII.
+După accesați cosul și confirmați cumpărătura.
+Convertirea este posibilă:
+500/1000/2000 stele de fidelitate echivalent cu 50/100/200 lei
+2. Accesorii StarNet (Gadgeturi, multimedia etc.):
+Accesați siteul  companiei: https://www.starnet.md/ru/ >> compartimentul StarShop accesînd linkul https://www.starnet.md/starshop/ >>Selectați  produsul  >>Adăugare produs în coș>> Vă logați în cabinetul personal (ID/parola) >> accesați coșul>>completați Detalii facturare >>la adresa indicați V.Pircalab(toate comenzile sunt primite la această adresă ,apoi direcționate la centrul StarNet unde sunteți deservit)>>Plaseaza comanda >>
+Как присоединиться к друзьям starnet?
+Чтобы воспользоваться программой лояльности, Вам необходимо активировать свой личный кабинет.
+---Зайдите в личный кабинет на my.starnet.md
+---Введите логин и пароль (они указаны в контракте полученный при подключений)
+---Заполните анкету регистрации и получите первые 500звездочек
+Как можно получить экстра бонусы?
+---Оплата авансом за 1 год (согласно контрактному тарифу) — 1000 звёздочек
+---Ваш день рождения — 200 звёздочек
+---За приглашение друга в сеть — эквивалент текущего абонемента в звёздочеках (согласно контрактному тарифу)
+ 
+Для более подробной информации, перейдите по ссылке: https://www.starnet.md/ru/prietenii-starnet-2/
+Зарегистрируйтесь в программе лояльности “Друзья StarNet” и можете начать собирать баллы за лояльность  уже сегодня! Эта программа основана на накопительной системе баллов лояльности,. Количество звезд лояльность зависит от   своевременно оплачиваете фактуру, пакета и времени проведенного в сети StarNet.
+Вы можете использовать эти звезд лояльность  для:
+ 
+
+1. Поплнение счёта StarNet.
+Bы можете пополнить свой счет, войдя в свой личный кабинет, перейдите в MY STARNET>> ДРУЗЬЯ STARNET>> КАТАЛОГ УСЛУГ 
+После доступа к вашей корзине и подтверждения покупки.
+Обменять звёзд лояльности возможно:
+500/1000/2000 звёзд , эквивалентной 50/100/200 леев.
+2. Аксессуаров StarNet (Gadgets, мультимедиа, и т.д.)
+нажав на ссылку https://www.starnet.md/starshop/
+Выберите товар>> добавить в корзину >>
+войдя в свой личный кабинет >> получить доступ к корзине >> заполнить все данные >> по указанному адресу V.Pircalab(все  заказы принимаются по этому адресу, затем направляются в центр StarNet, где вы обслуживаетесь) >>подтверждения покупки.
+STAR SHOP
+În cazul în care comanda StarShop  a fost plasată cu succes, termenul de a primi comanda este pînă la 30zile.
+Managerul personal revine cu apel preventiv cînd comanda este la oficiul care Vă deservește și poate fi ridicată.
+Vă mulțumim pentru colaborare.
+Заказ принимается к центральный офис потом отправляется в офис которы Вас обслуживает .Заказ с StarShop-можете получить в течение 30 дней.Все детали по поводу заказа может сообщить только менеджер.Когда заказ будет в офис который Вас обслуживает менеджер Вам обязательно позвонить и сообщит.
+A UITAT PAROLA DE LA CABINETUL PERSONAL
+Este necesar să utilizați comanda „Ai uitat parola?”
+Și să introduceți urmatoarele date pentru reactivare ID:
+Login:
+E-mail:
+După introducerea datelor de mai sus , veți recepționa un mesaj pe adresa de e-mail
+Accesați mesajul și continuați prin „apasă aici pentru a continua”
+Urmează să se deschidă 2 câmpuri
+Indicați parola nouă și confirmarea acesteia
+Parola necesar să conțină minim 8 caractere, o litera mare, litera mică și cifre.
+Вы должны использовать « Ai uitat parola ?»
+Введите следующие данные
+ID:
+Login:
+E - mail:
+После ввода выше указанных данных, вы получите сообщение на свой адрес  электронной почты
+Перейдите  к сообщению и продолжите, нажав „apasă aici pentru a continua ”
+Два поля должны быть открыты
+Укажите новый пароль и подтвердите его
+Пароль должен содержать не менее 8 символов, большие буквы , маленькие буквы  и цифры.
+REZILIERE
+PESTE HOTARE
+Necesar ca titularul contractului sa scrie o Cerere de reziliere către adresa de e-mail a oficiului din sectorul care vă deserveste  ------------------------@starnet.md
+1. cerere de reziliere în formă liberă, cererea trebuie să fie scrisă de mână și semnată; 
+2. Cererea o scanați sau fotografiați;
+3. Fotografiați sau scanați buletinul de identitate MD sau pașaportul MD (semnăturile de pe cerere și actul de identitate trebuie să coincidă).
+Managerul personal revine cu detalii conform solicitării Dvs.
+ÎN ȚARĂ
+Este necesar ca titularul contractului să se apropie cu un act de identitate (Buletin, Pașaport, Permis de conducere) în oficiile StarNet și să depună cererea de reziliere.
+ 
+Если хотите расторгнуть контракт, в этом случае владелец контракта должен выслать на е-майл с заявлением об расторжение контракта  
+1. написать заявление от руки в свободной форме
+2. заявление подписать, сфотографировать или просканировать  
+3. сфотографировать или просканировать паспорт или булетин
+4. подписи должны совпадать!
+5. оба отправить на электронный адрес   @ starnet . md
+ 
+Владелец контракта необходимо обратиться с документами удостоверение личности (бюллетень, паспорт, водительские права), в офисы StarNet и подать заявление на расторжение договора.
+SISTARE
+PESTE HOTARE
+În cazul în care titularul este peste hotare
+Necesar ca titularul contractului să scrie o Cerere de sistare  către adresa de e-mail a oficiului din sectorul care vă deservește -------------------
+1. cerere de sistare  în forma liberă, cererea trebuie să fie scrisă de mînă și semnată , indicați pe ce perioada doriți sistarea serviciilor de la data/luna pînă la data/ luna (pînă la 60zile)
+2. Cererea o scanați sau fotografiați;
+3. Fotografiați sau scanați buletinul de identitate sau pașaportul (semnaturile de pe cerere și actul de identitate trebuie să coincidă)
+ 
+ÎN ȚARĂ
+În cazul în care solicitați sistare este necesar să indicați:
+- ID personal
+- perioada exactă de sistare de la (data/luna) pînă la (data/luna). Sistarea poate fi pînă la 60zile.
+- numărul Dvs de contact
+Managerul personal revine cu detalii.
+***
+ 
+Sistarea serviciilor este posibila pe termen de 60zile intr-un an calendaristic.Sistarea este posibila pe 7-30 zile-cost 40lei internet+tv  
+***
+ Vă rugăm să concretizați un număr de contact ------------
+Solicitarea Dvs,a fost preluată și expediată către managerul personal. În cel mai scurt timp managerul o să  revină cu detalii.
+ 
+Если Вы находитесь  за границей
+и хотите приостановить услуги ,в этом случае владелец контракта должен выслать на емайл заявление о приостановление услуг
+1. писать заявление от руки в свободной форме (укажите точинии период приостановление услуг : от (дата/месяц) и до (дата/месяц) приостановление услуг может быть до 60 дней в году )
+2. заявление подписать, c фотографировать или просканировать  
+3. сфотографировать или просканировать паспорт или булетин
+4. подписи должны совпадать!
+5. оба отправить на электронный адрес   @starnet.md
+
+Чтобы мы могли помочь Вам:
+- укажите пожалуйста Ваш ИД,
+-  точинии период приостановление услуг : от (дата/месяц) и до (дата/месяц). Приостановление услуг может быть до 60 дней в году
+-контактный номер
+ 
+***
+ 
+Вы можете приостановить услуги до 60 дней.
+Если у Вас интернет+ тв =40 лей
+ ***
+ Мы передадим заявление менеджеру или Вы можете позвоните менеджеру.
+SCHIMB DE ADRESĂ
+Pentru schimb de adresă este necesar să indicați:
+- ID personal
+- adresa nouă, pentru a verifica aria de acoperire
+- numărul Dvs de contact
+Toate modificările pot fi efectuate doar de către titularul contractului. Managerul personal revine cu detalii.
+În cazul în care titularul este peste hotare
+Necesar ca titularul contractului să scrie o Cerere de schimb de adresa  către adresa de e-mail a oficiului din sectorul care vă deservește -----------------
+1. cerere de schimb de adresă  în forma liberă, cererea trebuie să fie scrisă de mână și semnată.
+Indicați în cerere:
+- adresa nouă
+- numele/prenumele persoanei responsabile care va fi la domiciliu în timp ce se va efectua schimbul de adresă
+- numărul de contact a persoanei responsabile
+2. Cererea o scanați sau fotografiați;
+3. Fotografiați sau scanați buletinul de identitate sau pașaportul (semnăturile de pe cerere și actul de identitate trebuie să coincidă)
+Для изменение адреса, вы должны указать:
+- Персональный ИД
+- новый адрес
+- Ваш контактный номер
+Мы передадим Ваше заявление менеджеру он Вам позвонит и проинформирует все детали.
+SCHIMB DE TITULAR
+Pentru a efectua schimbul de titular este necesar ca titularul existent și respectiv noul titular să se apropie în Centru de Vânzări care Vă deservește,  ambii cu buletinul de identitate.
+Pe loc se efectuează toate modificările, managerul personal oferă toate informațiile conform solicitării.
+Если вы запрашиваете обмен владельца контракта, необходимо, чтобы существующий владелец контракта и новый владелец обратились в офисе, который  Вас обслуживает , оба  с удостоверением личности .
+Все изменения делаются  на месте .
+WI-FI PUBLIC
+CLIENT NOU
+În cazul în care nu dețineți servicii StarNet, iar la adresa Dvs beneficiați de wi-fi public StarNet, pentru conectare  urmați pașii de mai jos:
+- accesați rețeua StarNet wi-fi pe dispozitiv
+- după conectare se va deschide portalul de conectare
+- utilizați butonul „Client Nou”
+- procurați un abonament StarBox Eco sau StarBox Guest
+- achitarea se efectueză doar prin card bancar
+- viteza va fi pînă la 10Mbps/sec.
+- durata unei sesiuni este de 3 ore
+- conexiunea este valabilă doar pentru un singur dispozitiv.
+CLIENT EXISTENT
+În cazul în care dețineți servicii StarNet, iar la adresa Dvs. beneficiați de wi-fi public StarNet, pentru conectare  urmați pașii de mai jos:
+- accesați rețeua StarNet wi-fi pe dispozitiv
+- după conectare se va deschide portalul de conectare
+- utilizați butonul „Client Existent”
+- utilizați datele conform contractului: ID/Login
+- viteza va fi pînă la 10 Mbps/sec.
+ 
+ 
+ 
+ 
+***
+În cazul în care la ecranul dispozitivului Dvs. nu este indicat client nou/client existent, înseamnă că nu dispuneți de wi-fi public StarNet, ci accesați rețeaua personală a unui client StarNet (wi-fi public este disponibil doar în unele parcuri din Chișinău).
+ 
+ 
+
+Если вы не являетесь клиентом StarNet и пользуетесь общедоступным Wi-Fi StarNet, необходимо:
+- получитe доступ к сети Wi-Fi StarNet на вашем устройстве
+- откроется портал подключения
+- нажмите кнопку «Новый клиент»
+- необходимо приобрести подписку StarBox Eco или StarBox Guest
+- оплата производится только банковской картой - скорость будет до 10 Мбит/с.
+ 
+ 
+ 
+ 
+
+
+Если вы являетесь клиентом StarNet и по вашему адресу пользуетесь общедоступным Wi-Fi StarNet, необходимо:
+- получите доступ к сети Wi-Fi StarNet на вашем устройстве
+- откроется портал подключения
+- нажмите кнопку «Существующий клиент»
+-  используете данные согласно договору: ID/Логин
+- скорость будет до 10 Мбит/с.
+ 
+Если на экране вашего устройства не указан новый/существующий клиент, это означает, что у вас нет общедоступного Wi-Fi StarNet, но вы получаете доступ к личной сети клиента StarNet (общедоступный Wi-Fi доступен только в некоторых парках Кишинева).
+***
+Если вы не пользуетесь услугами компании StarNet, для того чтобы получить доступ к общедоступному Wi-Fi StarNet, необходимо:
+Вы подключаетесь к сети StarNet >> стоимость абонемент  30 леев / месяц >> платёж только банковской картой >> просматривайте интернет с максимальной скоростью 10 Мбит / с. > > соединение действительно только для одного устройства.
+YOUTUBE
+Ne pare rău de situația dată, dar la moment sunt anumite blocaje din partea companiei YouTube. Se negociază cu furnizorul, iar echipa responabilă face tot posibilul ca situația dată să fie soluționată în cel mai scurt timp. Suntem în așteptarea unui răspuns din partea companiei YouTube.
+Vă mulțumim pentru înțelegere.
+ 
+ 
+SAU
+Aplicațiile instalate pe Set Top Box : YouTube, ivi, megogo etc. sunt prestate de furnizori.
+Vă informăm că sunt anumite blocaje din partea furnizorului de servicii YouTube și așteptăm un răspuns din partea lor. Pentru mai multe detalii, accesați link-ul:
+https://www.starnet.md/news/aplicatia-youtube-nu-mai-este-disponibila-pentru-mai-multe-dispozitive/  
+Vă mulțumim pentru înțelegere.
+Извините за неудобств.
+Приложения, установленные на телевизионной приставке: YouTube, ivi, megogo- предоставляются поставщиками.
+Мы понимаем Вашу ситуацию, но на данный момент от провайдеров YouTube проводятся технические работы.
+Спасибо за понимание.
+MODALITĂȚI DE ACHITARE
+Plățile pot fi efectuate prin modalităţile cunoscute:
+---ghişeele băncilor şi bancomatelor (Energbank, EuroCreditBank, Eximbank, Victoriabank, Mobiasbanca, Moldova Agroindbank, Fincombank, Moldindconbank),
+---centrele de vânzări StarNet,
+---terminale de plăţi electronice, servicii de online banking şi online payment.
+---online direct de pe site-ul StarNet  https://pay.starnet.md  utilizând cardul bancar Visa sau MasterCard (inclusiv Visa Electron şi Maestro).
+Платеж можно осуществить следующим образом:
+---Через кассы банков и банкоматы (Energbank, EuroCreditBank, Eximbank, Victoriabank, Mobiasbanca, Moldova Agroindbank, Fincombank, Moldindconbank),
+---В центрах продаж StarNet,
+---Платежные терминалы, услуги online banking и online payment.
+---Прямо на сайте StarNet  https://pay.starnet.md  используя банковскую карточку Visa или MasterCard (включая Visa Electron и Maestro).
+ACHITARE ERONATĂ
+În cazul în care ați efectuat achitare eronat este necesar să indicați:
+* ID corect:
+* ID eronat:
+* indicați  primele 4 cifre și ultimele 4 cifre a cardului cu care a fost efectuată achitarea
+* prezentați confirmarea plății foto/screen pentru a expedia solicitarea Dvs. echipei responsabile.
+Если вы сделали неправильный платеж, вы должны указать:
+* Ваш ИД: 
+* Неверный ИД: 
+* укажите первые 4 цифры и последние 4 цифры карты, с которой была произведена оплата
+* отправить фото / screen подтверждение оплаты,    чтобы отправить заявление ответственному отделу.
+SCHIMB DE ABONAMENT
+Pentru modificare de abonament (adăugare/excludere TV) este necesar de a vă apropia în oficiile StarNet, iar managerii vor oferi mai multe detalii.
+Între timp, puteți vizualiza lista de abonamente aici: https://www.starnet.md/pachete-3-servicii-3/
+sau oferta actuală aici: https://promo.starnet.md/ro
+Чтобы изменить подписку (добавить / исключить ТВ), необходимо обратиться в офисы StarNet, и менеджеры предоставят более подробную информацию.
+В то же время, вы можете просмотреть список абонементов здесь: https://www.starnet.md/ru/pachete-3-servicii-3/ или текущее предложение здесь: https://promo.starnet.md/ru
+Vă rugăm să indicați un număr de contact pentru a prelua solicitarea Dvs și a expedia  echipei responsabile.
+În cel mai scurt timp managerul Vă apelează și oferă toate detaliile conform solicitării.
+Пожалуйста, отправьте нам контактный номер.
+Мы передадим Ваше заявление ответственному отделу.
+Вам позвонит и сообщит все детали .
+
+
+
+
+
+
+
+DERANJAMENT TEHNIC
+AVARIERE
+Vă mulțumim pentru sesizare, ne pare rău că vă confruntați cu această situație, vă rugăm să ne acordați câteva clipe ca să verificăm.
+La moment, este înregistrată o avariere pe sectorul Dvs, dar primiți asigurările noastre că echipa tehnică deja se ocupă de remediere.
+Ne cerem scuze pentru inconveniențele create.
+Из проверенные данные по Вашему адресу зарегистрировали технический инцидент.  Ответственная команда проинформирована, они делают всё возможное чтобы как можно быстреe разрешить ситуацию.
+Приносим наши извинения и спасибо за понимание.
+A UITAT PAROLA DE LA CABINETUL PERSONAL
+Este necesar să utilizați comanda „Ai uitat parola?”
+Și să introduceți urmatoarele date pentru reactivare:
+ID:
+Login:
+E-mail:
+După introducerea datelor de mai sus , veți recepționa un mesaj pe adresa de e-mail.
+Accesați mesajul și continuați prin ,,apasă aici pentru a continua,,
+Urmează să se deschidă 2 câmpuri
+Indicați parola nouă și confirmarea acesteia
+Parola necesar să conțină minim 8 caractere, o litera mare, litera mică și cifre.
+Вы должны использовать « Ai uitat parola ?»
+Введите следующие данные:
+ID:
+Login:
+E-mail:
+После ввода выше указанных данных, вы получите сообщение на свой адрес электронной  почты.
+Перейдите к сообщению и продолжите, нажав, apasă aici pentru a continua.
+Два поля должны быть открыты.
+Укажите новый пароль и подтвердите его.
+Пароль должен содержать не менее 8 символов, большие буквы, маленькие буквы  и цифры.
+ACCES PE ROUTER
+Din motiv de confidențialitate clienții nu dețin acces pe router. În cazul în care solicitați schimbarea denumirei/parolei wi-fi aveți posibilitate să le efectuați prin accesarea cabinetului personal >> alte servicii >> wi-fi >> schimba parola sau schimbă denumirea rețelei, apare SSID și efectuați modificările sau apelați către Serviciul Asistență Tehnică (persoane fizice) (022) 844-555, support@starnet.md.
+ 
+ 
+Из за конфиденциальности, клиенты не имеют доступа к р о ут е ру. Если вы хотите изменить имя/пароль wi-fi можете выполнить их, зайдя в личный кабинет >> другие услуги >> wi-fi >> изменить пароль или изменить имя сети, появится SSID и внесите изменения.
+Если вы запрашиваете другие изменения в интерфейсе маршрутизатора, необходимо сотрудничать со службой технической поддержки (физические лица) (022) 844-555, support@starnet.md.
+SCHIMB DENUMIRE/PAROLA WI-FI
+În cazul în care solicitați schimbarea denumirii/parolei wi-fi va fi necesar să urmați pașii: accesați cabinetul personal >> alte servicii >> wi-fi >> schimbă parola / denumirea rețelei, apare SSID și efectuați modificările sau puteți vizualiza detaliat insctrucțiuni aici: https://www.starnet.md/wp-content/uploads/2018/09/ghid.pdf
+Если вы хотите поменять имя/пароль Wi-Fi вам нужно будет выполнить следующие шаги:
+зайдите в личный кабинет >> другие услуги >> wi-fi >> измените пароль или измените имя сети, появится SSID и внесите изменения или можете посмотреть более подробную информацию здесь: https://www.starnet.md/wp-content/uploads/2018/09/ghid.pdf
+LUCRARE PLANIFICATĂ
+Din datele pe care le deținem la moment, în sectorul Dvs. sunt înregistrate lucrări planificate, dar primiți asigurările noastre că echipa tehnică deja se ocupă de remediere.
+ Ne cerem scuze pentru inconveniențele create.
+Из проверенные данные по Вашему адресу зарегистрировали запланированные работы.  Ответственная команда проинформирована, они делают всё возможное чтобы как можно быстреe разрешить ситуацию.
+Приносим наши извинения и спасибо за понимание.
+VERIFICĂRI
+Vă rugăm să ne acordați câteva clipe ca să verificăm.
+O să vă rog să ne oferiți mai multe detalii ce ține de:
+ID:
+Login:
+[Date tehnice de care au nevoie colegii din suport tehnic]
+Пожалуйста, дайте нам несколько минут, чтобы проверить.
+Пожалуйста, дайте нам более подробную информацию о:
+ID:
+Логин:
+
+
+
+
+
+INFO
+O clipă, vă rog, să verificăm.
+Один момент, пожалуйста мы проверим.
+Indicați, Vă rog, cine este titularul contractului.
+Укажите , пожалуйста , кто владелец контракта .
+Telecomanda poate fi procurată de la oficiile StarNet.
+Prețul minimal a telecomenzii este 100lei, telecomanda de model mai nou 150lei.
+Vă sugerăm să apelați preventiv oficiul StarNet pentru a Vă asigura ca telecomenzi sunt în stoc.
+Пульт дистанционного  управления для STB можно приобрести в офисах StarNet .
+Минимальная цена пульта  составляет 100 лей, более новая модель пульта  - 150 лей.
+Мы предлагаем  сначяла позвонить в офис  StarNet   для таво чтобы убедиться, что  пульт находится в наличии.
+Au fost efectuate verificări și modificări.
+Este necesar:
+- să accesați internetul prin cablu și să efectuați un test de viteză conform linkului http://calitate.starnet.md/ rezultatul testului expediați aici(screen/poza)
+- verificați funcționalitatea canalelor TV.
+În cazul în care situația Dvs se repetă apelați Serviciul Asistență Tehnică (persoane fizice) (022) 844-555, support@starnet.md
+Pentru a verifica la momentul actual și nu întreprindeți măsuri individuale.
+E сли есть технический неполадки Вы сразу обращайтесь к нам. Вы можете отключить/
+подключить роутер из розетки а reset не рекомендуется потому что удаляются все данные. Вам нужно позвонить Техническая поддержка 24/24 (022)844-555,  support@starnet.md
+ESCROCHERIE
+Vă mulțumim pentru sesizare. Vă rugăm să ignorați astfel de informații/mesaje. Toate informațiile privitor la campanii și concursuri pot fi vizualizate pe pagina oficială StarNet https://www.starnet.md/ .
+Спасибо за ваше уведомление. Пожалуйста игнорируйте эти сообщение. Компания StarNet не предоставляет на данный момент конкурсы/ призы. Всю информацию о компании StarNet можно увидеть на официальном сайте https://www.starnet.md/ru/  
+SOLICITĂRII DE ANGAJARE
+Bună ziua.
+
+Dacă vă doriți să faceți parte din echipa StarNet, accesați link-ul:  https://www.starnet.md/pozitii_vacante/  pentru a analiza pozițiile vacante. Expediați CV-ul Dvs. către  Departamentul Resurse Umane pe adresa hr@starnet.md cu specificarea postului.
+Добрый день
+Если вы хотите присоединиться к команде StarNet , перейдите по ссылке https://www.starnet.md/pozitii_vacante/  и анализируйте вакантных должностей. Заинтересованным лицам предлагается направить свое резюме в отдел кадров по адресу hr @ starnet . md с указанием должности -
+
+
+CONCRETIZAREA LIPSEI ALTOR ÎNTREBĂRI / DERANJAMENTE
+Dacă vă mai putem ajuta cu ceva, vă rugăm să nu ezitați să ne scrieți sau să ne contactați.
+Dacă veți considera că vă mai putem ajuta cu ceva, Vă rugăm să nu ezitați să ne scrieți.
+Если мы можем помочь вам чем-то еще, пожалуйста, напишите нам или свяжитесь с нами.
+ Если вы считаете, что мы можем помочь вам чем-то еще, пожалуйста, напишите нам.
+
+
+
+
+
+
+
+
+
+
+
+			
+ÎNCHEIERE
+Vă mulțumim pentru adresarea Dvs.
+Echipa StarNet vă urează o zi reușită!
+Vă mulțumim pentru adresarea Dvs.
+Echipa StarNet vă urează o seară frumoasă! 
+Спасибо за ваше сообщение
+Команда StarNet желает вам удачного дня!
+Спасибо за ваше сообщение
+Команда StarNet желает вам прекрасного вечера!
+VERIFICAREA PREZENȚEI CLIENTULUI PE CHAT
+„Mai sunteți cu noi? În caz de inactivitate, chat-ul va fi încheiat în 10 minute.”
+„Sunteți online? În caz de inactivitate, chat-ul va fi încheiat în 10 minute.”
+„Вы все ещё с нами? В случае отсутствия ответа чат будет завершен через 10 минут.”
+„Вы онлайн? В случае отсутствия ответа чат будет завершен через 10 минут.”
+
+
+
+FAQs:
+
+
+
+Ce este portarea numărului?
+–
+Portarea numerelor este un serviciu care îți permite să păstrezi numărul de telefon atunci când schimbi furnizorul de rețele și servicii de telefonie.
+
+Portarea numerelor îți oferă libertatea de a alege furnizorul în baza unor criterii așa cum ar fi: calitatea serviciilor, tarifele utilizate, serviciul relații clienți etc. Libertatea lor de migrare nu este influențată de inconveniențe și costuri care apar odată cu schimbarea numerelor.
+
+Mai multe informații găsești pe http://www.portare.md.
+Este nevoie de suport tehnic pentru a instala video telefonul?
+Copy icon
+–
+Video Telefonul poate fi instalat foarte simplu și nu necesită cunoștințe tehnice avansate. În caz că apar anumite impedimente, apelați la Serviciul Clientelă – 022 844 444.
+Pot instala numărul de telefon pe mai multe dispozitive?
+Copy icon
+–
+Da, poți instala numărul de telefon pe mai multe dispozitive dar trebuie să fii conștient de faptul că se poate răspunde și se poate apela doar de pe dispozitivul pe care este descărcată aplicația.
+Este posibil să portez numărul de la un operator de telefonie mobilă?
+Copy icon
+–
+StarNet prestează servicii de telefonie fixă, respectiv în rețeaua StarNet pot fi portate doar numerele de la operatorii de telefonie fixă.
+
+
+
+Cum instalezi Bitdefender Internet Security 2020?Accesează contul Bitdefender Central.
+Dacă nu ai un cont, te rugăm să-ți creezi unul.
+Activează contul cu ajutorul codului pe care l-ai primit pe email după conectare.
+Toate posibilitățile de utilizare a softului le găsești în Ghidul Bitdefender.
+Dacă ai întâlnit dificultăți la instalare, vizualizează video tutorial.
+
